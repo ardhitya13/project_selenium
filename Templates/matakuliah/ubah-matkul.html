@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block kontenku %}
+
+<h2 class="display-6">Ubah Matakuliah</h2>
+<hr />
+<div class="row justify-content-center">
+    <div class="col-md-12">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/courses">Data Matakuliah</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Ubah Matakuliah</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="col-md-8">
+        <div class="card card-body">
+            <form action="/courses/edit/{{ course.0 }}" method="POST">
+                <div class="mb-3">
+                    <label for="course_name" class="form-label">Nama Matakuliah</label>
+                    <input type="text" name="course_name" value="{{ course.1 }}" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label for="sks" class="form-label">SKS</label>
+                    <input type="number" name="sks" value="{{ course.2 }}" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Deskripsi</label>
+                    <textarea name="description" class="form-control">{{ course.3 }}</textarea>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary btn-block">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block kontenku %}
+
+  <h2 class="display-6">Selamat datang di SIM!</h2>
+  <hr>
+  {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+      {{ message }}
+  </div>
+  {% endfor %} {% endif %} {% endwith %}
+
+  <div class="row">
+    <div class="col-7">
+      <iframe width="90%" height="450px" src="https://www.youtube.com/embed/0HkgpstOWzo" frameborder="0" allowfullscreen></iframe>
+
+    </div>
+    <div class="col-5">
+      <p>Politeknik Negeri Batam (Polibatam) berkomitmen untuk menjadi pusat unggulan dalam pengembangan sumber daya manusia dan teknologi di wilayah Kepulauan Riau. Dengan fokus pada pendidikan vokasi yang berkualitas dan relevan dengan kebutuhan industri, Polibatam turut berperan dalam memajukan sektor ekonomi dan meningkatkan daya saing bangsa.</p>
+
+      <p>Sebagai lembaga pendidikan tinggi yang berorientasi pada kebutuhan pasar kerja, Polibatam aktif menjalin kerjasama dengan berbagai industri dan lembaga terkait untuk memastikan lulusan-lulusannya siap bersaing dalam dunia kerja. Dengan didukung oleh tenaga pengajar yang berkualitas dan fasilitas belajar yang memadai, Polibatam terus berupaya memberikan kontribusi yang nyata dalam pembangunan Indonesia melalui pengembangan potensi sumber daya manusia.</p>
+      
+    </div>
+  </header>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>SIM WEBAPP</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <h2 class="text-white fw-bold">
+                        <img src="{{ url_for('static', filename='images/iflogo.png') }}" alt="LOGO IF" width="200px" />
+                    </h2>
+                </a>
+
+                <div>
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="/dashboard">Dashboard</a>
+                        <a class="nav-link" href="/mahasiswa">Mahasiswa</a>
+                        <a class="nav-link" href="/courses">Matakuliah</a>
+                        <a class="nav-link" href="/joke">Joke of the Day </a>
+                        <a class="nav-link" href="/tentang">Tentang</a>
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container pt-4">{% block kontenku %} {% endblock %}</div>
+
+        <footer class="mt-5 text-center bg-dark text-white py-3">Copyright &copy 2023</footer>
+
+        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    </body>
+</html>
