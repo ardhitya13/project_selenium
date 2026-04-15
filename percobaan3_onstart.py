@@ -1,7 +1,10 @@
-from locust import HttpUser, TaskSet, task, between
+from locust import HttpUser, SequentialTaskSet, task, between
 
 
-class MyTaskSet(TaskSet):
+class MyTaskSet(SequentialTaskSet):
+    def on_start(self):
+        print("on_start dijalankan sekali saat user virtual mulai.")
+
     @task
     def method1(self):
         print("Fitur method 1")

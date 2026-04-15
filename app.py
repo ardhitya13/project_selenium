@@ -102,7 +102,6 @@ def tambah_mahasiswa():
                            (nim, nama_lengkap, alamat))
 
             connection.commit()
-            cursor.close()
             connection.close()
 
             flash('Data mahasiswa berhasil ditambahkan!', 'success')

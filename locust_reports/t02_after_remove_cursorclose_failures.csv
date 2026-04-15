@@ -1,0 +1,8 @@
+Method,Name,Error,Occurrences
+POST,/mahasiswa/tambah,HTTPError('500 Server Error: INTERNAL SERVER ERROR for url: /mahasiswa/tambah'),26
+POST,/dashboard,"ConnectionRefusedError(10061, '[WinError 10061] No connection could be made because the target machine actively refused it.')",161
+POST,/verifikasi-login,"ConnectionRefusedError(10061, '[WinError 10061] No connection could be made because the target machine actively refused it.')",495
+POST,/verifikasi-login,HTTPError('500 Server Error: INTERNAL SERVER ERROR for url: /verifikasi-login'),2
+POST,/,"ConnectionRefusedError(10061, '[WinError 10061] No connection could be made because the target machine actively refused it.')",541
+POST,/mahasiswa/tambah,"ConnectionRefusedError(10061, '[WinError 10061] No connection could be made because the target machine actively refused it.')",7039
+POST,/mahasiswa,"ConnectionRefusedError(10061, '[WinError 10061] No connection could be made because the target machine actively refused it.')",508

@@ -1,7 +1,7 @@
-from locust import HttpUser, TaskSet, task, between
+from locust import HttpUser, SequentialTaskSet, task, between
 
 
-class MyTaskSet(TaskSet):
+class MyTaskSet(SequentialTaskSet):
     @task
     def method1(self):
         print("Fitur method 1")
